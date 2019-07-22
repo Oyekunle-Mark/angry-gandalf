@@ -3,7 +3,7 @@ const { v4 } = require('uuid');
 
 module.exports = (password, rounds = 10) =>
   new Promise((resolve, reject) => {
-    if (!password) reject('Provide a value to be hashed');
+    if (!password) reject(Error('Provide a value to be hashed'));
 
     const salt = v4();
     let hash = password;

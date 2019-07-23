@@ -1,5 +1,11 @@
 const md5 = require('md5');
 
+/**
+ * *Compares a password and a hash
+ * @param {any} originalPassword
+ * @param {string} hashedPassword
+ * @returns {boolean}
+ */
 module.exports = (originalPassword, hashedPassword) =>
   new Promise((resolve, reject) => {
     if (!originalPassword || !hashedPassword)

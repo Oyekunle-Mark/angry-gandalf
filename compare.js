@@ -14,7 +14,5 @@ module.exports = (originalPassword, hashedPassword) =>
       result = md5(result + salt);
     }
 
-    if (result !== hash) resolve(false);
-
-    resolve(true);
+    resolve(result === hash);
   });
